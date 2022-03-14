@@ -19,6 +19,9 @@ void run(string t, vector<double> &time)
 }
 int main()
 {
+    ios_base::sync_with_stdio(0);
+    cin.tie();
+    cout.tie();
     system("Case.exe");
     vector<double> t1, t2, t3, t4;
     run("HeapSort", t1);
