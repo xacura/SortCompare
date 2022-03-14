@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int arr[1000000];
-void heapify(int arr[], int n, int i)
-{
+int arr[1000000], n;
+void heapify(int n, int i) {
 	int largest = i; 
 	int l = 2 * i + 1; 
 	int r = 2 * i + 2; 
@@ -13,25 +12,26 @@ void heapify(int arr[], int n, int i)
 		largest = r;
 	if (largest != i) {
 		swap(arr[i], arr[largest]);
-		heapify(arr, n, largest);
+		heapify(n, largest);
 	}
 }
-void heapSort(int arr[], int n)
-{
+void heapSort() {
 	for (int i = n / 2 - 1; i >= 0; i--)
-		heapify(arr, n, i);
+		heapify(n, i);
 	for (int i = n - 1; i > 0; i--) {
 		swap(arr[0], arr[i]);
-		heapify(arr, i, 0);
+		heapify(i, 0);
 	}
 }
 
-int main(int argc, char * argv[])
-{
-    string t = argv[1];
+int main(int argc, char * argv[]) {
+    ios_base::sync_with_stdio(0);
+    cin.tie();
+    cout.tie();
+	string t = argv[1];
     freopen(("case" + t + ".inp").c_str(), "r", stdin);
-    int n; cin >> n;
+	cin >> n;
     for (int i=0 ; i<n ; i++) cin >> arr[i];
-    heapSort(arr, n);
+    heapSort();
 	return 0;
 }
