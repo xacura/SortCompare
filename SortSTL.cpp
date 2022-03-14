@@ -1,10 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int arr[1000000];
+int arr[1000000], n;
 
 int main(int argc, char * argv[]){
-    int n;
+    ios_base::sync_with_stdio(0);
+    cin.tie();
+    cout.tie();
     string t = argv[1];
     freopen(("case" + t + ".inp").c_str(), "r", stdin);
     cin >> n;
