@@ -46,6 +46,9 @@ void casei(int stt)
 
 int main()
 {
+    ios_base::sync_with_stdio(0);
+    cin.tie();
+    cout.tie();
     srand(int(time(0)));
     case1();
     cout << "Case 1 is done!!!\n";
